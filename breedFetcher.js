@@ -3,8 +3,10 @@ const request = require("request");
 let userInput = process.argv.slice(2);
 // console.log(userInput);
 
+let catApiUrl = "https://api.thecatapi.com/v1/breeds/search?q=";
+
 request(
-  "https://api.thecatapi.com/v1/breeds/search?q=" + userInput,
+   `${catApiUrl}${userInput}`,
   (error, response, body) => {
     if (error) {
       console.log("There was an error while fetching: ", error);
