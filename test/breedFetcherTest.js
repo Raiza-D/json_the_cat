@@ -17,14 +17,11 @@ describe("fetchBreedDescription", () => {
     });
   });
 
-  it("returns an error message when an invalid/non-existant breed is passed in", (done) => {
+  it("returns an error message when an invalid/non-existent breed is passed in", (done) => {
     fetchBreedDescription("Husky", (err, desc) => {
 
       assert.equal(err, "Breed not found. Enter a valid breed.");
       assert.equal(desc, null);
-
-      console.log("error, err");
-      console.log("desc", desc);
 
       done();
     });
