@@ -1,8 +1,6 @@
 const request = require("request");
 
-let userInput = process.argv.slice(2);
-
-let URL = "https://api.thecatapi.com/v1/breeds/search?q=" + userInput;
+const URL = "https://api.thecatapi.com/v1/breeds/search?q=" + breedName;
 
 const fetchBreedDescription = function(breedName, callback) {
 
