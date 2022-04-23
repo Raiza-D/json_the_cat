@@ -19,5 +19,10 @@
   "homepage": "https://github.com/Raiza-D/json_the_cat#readme",
   "dependencies": {
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "and": "^0.0.3",
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2"
   }
 }
