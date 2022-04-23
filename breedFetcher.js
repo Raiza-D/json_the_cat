@@ -15,7 +15,7 @@ const fetchBreedDescription = function(breedName, callback) {
     // Code to take care of if cat breed provided not found OR if none provided
     if (data[0] === undefined) {
       // Invoke callback. 'desc' argument is null
-      callback(`Breed not found: ${data[0]}. Enter a valid breed.`, null);
+      callback("Breed not found. Enter a valid breed.", null);
       return;
     }
 
