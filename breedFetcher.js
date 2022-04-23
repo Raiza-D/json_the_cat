@@ -6,7 +6,7 @@ const fetchBreedDescription = function(breedName, callback) {
   request(URL, (error, response, body) => {
     // // Code for taking care of error if API is not working
     if (error) {
-      // console.log("There was an error while fetching: ", error);
+      // Invoke callback. 'desc' argument is null
       callback(error, null);
       return;
     }
@@ -14,25 +14,16 @@ const fetchBreedDescription = function(breedName, callback) {
 
     // Code to take care of if cat breed provided not found OR if none provided
     if (data[0] === undefined) {
-      // console.log(`Breed not found: ${data[0]}. Enter a valid breed.`);
-      callback(`${error} Breed not found: ${data[0]}. Enter a valid breed.`, null);
+      // Invoke callback. 'desc' argument is null
+      callback(`Breed not found: ${data[0]}. Enter a valid breed.`, null);
       return;
     }
 
     const catDescription = data[0].description;
-    // console.log(catDescription);
+    // Invoke callback. 'error' argument is null. 'desc' argument is breed's descripton
+    // from CatAPI
     callback(null, catDescription);
   });
 };
 
 module.exports = { fetchBreedDescription };
-
-/* As per mentor:
-If you want to use and print the console log messages of within if statements
-in the breedFetcher.js file, you'd have to remove the second parameter for
-fetchBreedDescription function. This leaves it with only one argument -- the breedName.
-How I had it before was not technically wrong. It's just not the right way for
-this assignment. Assignment requests to use the callback function of
-fetchBreedDescription.
-*/
-
