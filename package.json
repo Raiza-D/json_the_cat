@@ -1,8 +1,8 @@
 {
   "name": "json_the_cat",
   "version": "1.0.0",
-  "description": "",
-  "main": "breedFetcher.js",
+  "description": "Program to fetch cat breed information from CatAPI",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +21,6 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "and": "^0.0.3",
     "chai": "^4.3.6",
     "mocha": "^9.2.2"
   }
